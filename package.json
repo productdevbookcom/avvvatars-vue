@@ -9,11 +9,11 @@
     "vue",
     "random avatar"
   ],
-  "homepage": "https://github.com/0fatihyildiz/avvvatars-vue",
-  "bugs": "https://github.com/0fatihyildiz/avvvatars-vue/issues",
+  "homepage": "https://github.com/productdevbookcom/avvvatars-vue",
+  "bugs": "https://github.com/productdevbookcom/avvvatars-vue/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/0fatihyildiz/avvvatars-vue.git"
+    "url": "https://github.com/productdevbookcom/avvvatars-vue.git"
   },
   "engines": {
     "node": ">=16",
