@@ -1,6 +1,4 @@
-<div align="center">
-  <a href="https://avvvatars.com"><img src="https://github.com/0fatihyildiz/avvvatars-vue/raw/main/Thumbnail.png" alt="Avvvatars" height="464"></a>
-</div>
+<a href="https://avvvatars.com"><img src="https://github.com/0fatihyildiz/avvvatars-vue/raw/main/Thumbnail.png" alt="Avvvatars" height="620"></a>
 
 
 [![npm version](https://badge.fury.io/js/avvvatars-vue.svg)](https://badge.fury.io/js/avvvatars-vue)
