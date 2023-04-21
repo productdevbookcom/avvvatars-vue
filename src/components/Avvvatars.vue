@@ -4,7 +4,7 @@ import randiman from '../lib/random'
 import { BACKGROUND_COLORS, SHAPE_COLORS, TEXT_COLORS } from '../lib/colors'
 import Shapes from './Shapes.vue'
 
-type Style = 'character' | 'shape'
+type Variant = 'character' | 'shape'
 
 interface Props {
   displayValue?: string
@@ -12,7 +12,7 @@ interface Props {
   value: string
   size?: number
   shadow?: boolean
-  style?: Style
+  variant?: Variant
 
   // toggle border
   border?: boolean
@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
   displayValue: '',
   value: '',
   size: 32,
-  style: 'shape',
+  variant: 'character',
   shadow: false,
   border: false,
   borderSize: 2,
@@ -40,7 +40,7 @@ const name = computed(() =>
 const key = computed(() => randiman({ value: props.value, min: 0, max: 19 }))
 
 const shapeKey = computed(() =>
-  randiman({ value: props.value, min: 0, max: 59 }),
+  randiman({ value: props.value, min: 1, max: 60 }),
 )
 
 const borderComputed = computed(() => {
@@ -62,12 +62,12 @@ const shadowComputed = computed(() => {
 
 const fontSize = `${Math.round((props.size / 100) * 37)}px`
 
-const style = ref(props.style)
+const variant = ref(props.variant)
 </script>
 
 <template>
   <div class="avvvatars" :style="[borderComputed, shadowComputed]">
-    <template v-if="style === 'character' && value">
+    <template v-if="variant === 'character'">
       <p class="text">
         {{ name }}
       </p>
