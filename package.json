@@ -1,18 +1,20 @@
 {
-  "name": "ts-bundle-template",
-  "version": "1.0.0",
-  "description": "add description",
+  "author": "Fatih Yildiz",
+  "name": "avvvatars-vue",
+  "version": "0.4.4",
+  "description": "generates unique placeholder avatars with either characters or shapes for your vue project",
   "keywords": [
-    "add keywords"
+    "placeholder avatars",
+    "avatars",
+    "vue",
+    "random avatar"
   ],
-  "homepage": "https://github.com/productdevbookcom/ts-bundle-template",
-  "bugs": "https://github.com/productdevbookcom/ts-bundle-template/issues",
-  "author": "add author",
+  "homepage": "https://github.com/0fatihyildiz/avvvatars-vue",
+  "bugs": "https://github.com/0fatihyildiz/avvvatars-vue/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/productdevbookcom/ts-bundle-template.git"
+    "url": "https://github.com/0fatihyildiz/avvvatars-vue.git"
   },
-  "funding": "https://github.com/sponsors/productdevbook",
   "engines": {
     "node": ">=16",
     "pnpm": ">=8"
@@ -22,7 +24,8 @@
     ".": {
       "import": "./dist/index.es.js",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./style": "./dist/style.css"
   },
   "main": "./dist/index.es.js",
   "types": "./dist/index.d.ts",

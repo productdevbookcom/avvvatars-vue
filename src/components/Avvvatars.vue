@@ -1,0 +1,121 @@
+<script lang="ts" setup>
+import { computed, ref } from 'vue'
+import randiman from '../lib/random'
+import { BACKGROUND_COLORS, SHAPE_COLORS, TEXT_COLORS } from '../lib/colors'
+import Shapes from './Shapes.vue'
+
+type Style = 'character' | 'shape'
+
+interface Props {
+  displayValue?: string
+  // this should be unique to user, it can be email, user id, or full name
+  value: string
+  size?: number
+  shadow?: boolean
+  style?: Style
+
+  // toggle border
+  border?: boolean
+  borderSize?: number
+  borderColor?: string
+  radius?: number
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  displayValue: '',
+  value: '',
+  size: 32,
+  style: 'shape',
+  shadow: false,
+  border: false,
+  borderSize: 2,
+  borderColor: '#fff',
+  radius: 0,
+})
+
+const name = computed(() =>
+  String(props.displayValue || props.value).substring(0, 2),
+)
+
+const key = computed(() => randiman({ value: props.value, min: 0, max: 19 }))
+
+const shapeKey = computed(() =>
+  randiman({ value: props.value, min: 0, max: 59 }),
+)
+
+const borderComputed = computed(() => {
+  if (!props.border)
+    return ''
+  return `border: ${props.borderSize}px solid ${props.borderColor};`
+})
+
+const shadowComputed = computed(() => {
+  if (!props.shadow)
+    return ''
+
+  return `
+        box-shadow:
+        0px 3px 8px rgba(18, 18, 18, 0.04),
+        0px 1px 1px rgba(18, 18, 18, 0.02);
+    `
+})
+
+const fontSize = `${Math.round((props.size / 100) * 37)}px`
+
+const style = ref(props.style)
+</script>
+
+<template>
+  <div class="avvvatars" :style="[borderComputed, shadowComputed]">
+    <template v-if="style === 'character' && value">
+      <p class="text">
+        {{ name }}
+      </p>
+    </template>
+    <template v-else>
+      <span class="shape">
+        <Shapes :name="`${shapeKey}`" :size="Math.round((size / 100) * 50)" />
+      </span>
+    </template>
+  </div>
+</template>
+
+<style scoped>
+.avvvatars {
+  width: v-bind(`${size}px`);
+  height: v-bind(`${size}px`);
+  border-radius: v-bind(`${radius || size}px`);
+  background-color: v-bind(`#${BACKGROUND_COLORS[key]}`);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.avvvatars:hover {
+  z-index: 3;
+}
+
+.avvvatars .shape {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  color: v-bind(`#${SHAPE_COLORS[key] || "currentColor"}`);
+}
+
+.avvvatars .text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  font-size: v-bind(fontSize);
+  color: v-bind(`#${TEXT_COLORS[key]}`);
+  line-height: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+</style>

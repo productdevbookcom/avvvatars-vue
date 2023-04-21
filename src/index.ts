@@ -1,1 +1,3 @@
-export { default as Button } from './button.vue'
+import { Avvvatars, plugin } from './AvvvatarsPlugin'
+
+export { Avvvatars, plugin }
