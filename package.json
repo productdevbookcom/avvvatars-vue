@@ -1,0 +1,68 @@
+{
+  "name": "ts-bundle-template",
+  "version": "1.0.0",
+  "description": "add description",
+  "keywords": [
+    "add keywords"
+  ],
+  "homepage": "https://github.com/productdevbookcom/ts-bundle-template",
+  "bugs": "https://github.com/productdevbookcom/ts-bundle-template/issues",
+  "author": "add author",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/productdevbookcom/ts-bundle-template.git"
+  },
+  "funding": "https://github.com/sponsors/productdevbook",
+  "engines": {
+    "node": ">=16",
+    "pnpm": ">=8"
+  },
+  "packageManager": "pnpm@8.0.0",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "vite build --mode production",
+    "dev": "vite",
+    "prepublishOnly": "pnpm run build",
+    "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
+    "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx . --fix",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "=>3.2.47"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.5",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitest/coverage-c8": "^0.30.1",
+    "@vue-macros/volar": "^0.9.5",
+    "@vue/test-utils": "^2.3.2",
+    "bumpp": "^9.1.0",
+    "eslint": "^8.38.0",
+    "jsdom": "^21.1.1",
+    "typescript": "^5.0.4",
+    "unplugin-vue-macros": "^2.0.0",
+    "vite": "^4.3.1",
+    "vite-plugin-dts": "^2.3.0",
+    "vitest": "^0.30.1",
+    "vue": "^3.2.47"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
