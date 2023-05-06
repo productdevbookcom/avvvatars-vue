@@ -1,5 +1,4 @@
-<a href="https://avvvatars.com"><img src="https://github.com/0fatihyildiz/avvvatars-vue/raw/main/Thumbnail.png" alt="Avvvatars" height="620"></a>
-
+![@productdevbook/avvvatars](https://github.com/0fatihyildiz/avvvatars-vue/raw/main/Thumbnail.png)
 
 [![npm version](https://badge.fury.io/js/avvvatars-vue.svg)](https://badge.fury.io/js/avvvatars-vue)
 [![npm](https://img.shields.io/npm/dt/avvvatars-vue.svg)](https://www.npmjs.com/package/avvvatars-vue)
@@ -128,16 +127,6 @@ Override border color
 ```jsx
 <Avvvatars value="best_user@gmail.com" border-color="#fff" />
 ```
-
-
-## Sponsors
-
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/oku-ui/static/sponsors/sponsors.svg">
-    <img alt="sponsors" src='https://cdn.jsdelivr.net/gh/oku-ui/static/sponsors/sponsors.svg'/>
-  </a>
-</p>
-
 
 ## License
 
