@@ -129,6 +129,16 @@ Override border color
 <Avvvatars value="best_user@gmail.com" border-color="#fff" />
 ```
 
+
+## Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/oku-ui/static/sponsors/sponsors.svg">
+    <img alt="sponsors" src='https://cdn.jsdelivr.net/gh/oku-ui/static/sponsors/sponsors.svg'/>
+  </a>
+</p>
+
+
 ## License
 
 MIT
