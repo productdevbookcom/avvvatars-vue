@@ -80,7 +80,7 @@ const variant = ref(props.variant)
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .avvvatars {
   width: v-bind(`${size}px`);
   height: v-bind(`${size}px`);

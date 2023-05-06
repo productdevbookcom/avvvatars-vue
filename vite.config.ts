@@ -19,10 +19,7 @@ export default defineConfig({
     dtsPlugin(),
     VueMacros({
       plugins: {
-        vue: Vue({
-          include: [/\.vue$/, /\.md$/],
-          reactivityTransform: true,
-        }),
+        vue: Vue(),
       },
     }),
   ],

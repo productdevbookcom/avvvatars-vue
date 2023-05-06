@@ -1,4 +1,4 @@
-export const BACKGROUND_COLORS = [
+const BACKGROUND_COLORS = [
   'F7F9FC',
   'EEEDFD',
   'FFEBEE',
@@ -21,7 +21,7 @@ export const BACKGROUND_COLORS = [
   'ECE1FE',
 ]
 
-export const TEXT_COLORS = [
+const TEXT_COLORS = [
   '060A23',
   '4409B9',
   'BD0F2C',
@@ -44,7 +44,7 @@ export const TEXT_COLORS = [
   '192251',
 ]
 
-export const SHAPE_COLORS = [
+const SHAPE_COLORS = [
   '060A23',
   '5E36F5',
   'E11234',
@@ -66,3 +66,9 @@ export const SHAPE_COLORS = [
   '222A54',
   '192251',
 ]
+
+export {
+  BACKGROUND_COLORS,
+  TEXT_COLORS,
+  SHAPE_COLORS,
+}
