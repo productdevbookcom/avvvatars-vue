@@ -1,4 +1,4 @@
-![@productdevbook/avvvatars](https://github.com/0fatihyildiz/avvvatars-vue/raw/main/Thumbnail.png)
+![@productdevbook/avvvatars](./.github/assets/Cover.png)
 
 [![npm version](https://badge.fury.io/js/avvvatars-vue.svg)](https://badge.fury.io/js/avvvatars-vue)
 [![npm](https://img.shields.io/npm/dt/avvvatars-vue.svg)](https://www.npmjs.com/package/avvvatars-vue)
