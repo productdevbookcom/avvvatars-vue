@@ -1,7 +1,7 @@
 {
   "author": "Fatih Yildiz",
   "name": "avvvatars-vue",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "generates unique placeholder avatars with either characters or shapes for your vue project",
   "keywords": [
     "placeholder avatars",
