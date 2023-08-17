@@ -65,7 +65,7 @@ const MersenneTwister = function (this: MersenneInitialTypes, seed: number) {
   this.UPPER_MASK = 0x80000000 /* most significant w-r bits */
   this.LOWER_MASK = 0x7FFFFFFF /* least significant r bits */
 
-  this.mt = new Array(this.N) /* the array for the state vector */
+  this.mt = Array.from({ length: this.N }) /* the array for the state vector */
   this.mti = this.N + 1 /* mti==N + 1 means mt[N] is not initialized */
 
   this.init_genrand(seed)
