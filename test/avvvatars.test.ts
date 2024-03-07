@@ -1,11 +1,11 @@
-import { describe, expect, test } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { mount } from '@vue/test-utils'
 import AvvvatarsVue from '../src/components/Avvvatars.vue'
 
 const value = 'Avvvatars'
 
-describe('Avvvatars Snapshots', () => {
-  test('value', () => {
+describe('avvvatars Snapshots', () => {
+  it('value', () => {
     const wrapper = mount(AvvvatarsVue, {
       props: {
         value,
@@ -14,7 +14,7 @@ describe('Avvvatars Snapshots', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  test('displayValue', () => {
+  it('displayValue', () => {
     const wrapper = mount(AvvvatarsVue, {
       props: {
         displayValue: value,
@@ -23,7 +23,7 @@ describe('Avvvatars Snapshots', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  test('Value & displayValue', () => {
+  it('value & displayValue', () => {
     const wrapper = mount(AvvvatarsVue, {
       props: {
         value,
@@ -33,7 +33,7 @@ describe('Avvvatars Snapshots', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  test('Size', () => {
+  it('size', () => {
     const wrapper = mount(AvvvatarsVue, {
       props: {
         value,
@@ -43,7 +43,7 @@ describe('Avvvatars Snapshots', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  test('Shape', () => {
+  it('shape', () => {
     const wrapper = mount(AvvvatarsVue, {
       props: {
         value,
@@ -53,7 +53,7 @@ describe('Avvvatars Snapshots', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  test('Shadow & Border', () => {
+  it('shadow & Border', () => {
     const wrapper = mount(AvvvatarsVue, {
       props: {
         value,

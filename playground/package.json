@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.2",
+    "avvvatars-vue": "workspace:^",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
-    "avvvatars-vue": "workspace:^",
     "vue-tsc": "^1.8.27"
   }
 }

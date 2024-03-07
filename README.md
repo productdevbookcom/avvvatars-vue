@@ -56,7 +56,7 @@ import 'avvvatars-vue/style'
 
 ### `value: string`
 
-This is required for plugin to work, each value generates a random avatar to unique to this value, so each time plugin renders, you will get the same results. 
+This is required for plugin to work, each value generates a random avatar to unique to this value, so each time plugin renders, you will get the same results.
 
 ```jsx
 <Avvvatars value="best_user@gmail.com" />
@@ -127,7 +127,6 @@ Override border color
 ```jsx
 <Avvvatars value="best_user@gmail.com" border-color="#fff" />
 ```
-
 
 ## Sponsors
 

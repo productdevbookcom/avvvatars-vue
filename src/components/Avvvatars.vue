@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { StyleValue, computed, reactive, ref } from 'vue'
+import type { StyleValue } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import randiman from '../lib/random'
 import { BACKGROUND_COLORS, SHAPE_COLORS, TEXT_COLORS } from '../lib/colors'
 import Shapes from './Shapes.vue'
@@ -75,8 +76,6 @@ const avvvatarsStyle = reactive({
   userSelect: 'none',
 }) as StyleValue
 
-
-
 const avvvatarsShapeStyle = reactive({
   display: 'inline-flex',
   alignItems: 'center',
@@ -90,7 +89,7 @@ const avvvatarsText = reactive({
   textAlign: 'center',
   boxSizing: 'border-box',
   fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif',
-  fontSize: fontSize,
+  fontSize,
   color: `#${TEXT_COLORS[key.value]}`,
   lineHeight: 0,
   textTransform: 'uppercase',

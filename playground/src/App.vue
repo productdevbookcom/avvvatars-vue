@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Avvvatars } from 'avvvatars-vue'
-
 </script>
 
 <template>
