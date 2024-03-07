@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import { mount } from '@vue/test-utils'
-import AvvvatarsVue from '@root/components/Avvvatars.vue'
+import AvvvatarsVue from '../src/components/Avvvatars.vue'
 
 const value = 'Avvvatars'
 
