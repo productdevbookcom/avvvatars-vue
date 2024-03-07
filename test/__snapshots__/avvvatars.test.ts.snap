@@ -1,34 +1,33 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Avvvatars Snapshots > Shadow & Border 1`] = `
-"<div data-v-d64f069a="" class="avvvatars" style="border: 2px solid #fff; box-shadow: 0px 3px 8px rgba(18, 18, 18, 0.04),
-        0px 1px 1px rgba(18, 18, 18, 0.02);">
-  <p data-v-d64f069a="" class="text">Av</p>
+exports[`avvvatars Snapshots > displayValue 1`] = `
+"<div style="width: 32px; height: 32px; border-radius: 32px; background-color: rgb(236, 250, 254); box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;">
+  <p style="margin: 0px; padding: 0px; text-align: center; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, BlinkMacSystemFont, &quot;Inter&quot;, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; color: rgb(31, 132, 163); line-height: 0; text-transform: uppercase; font-weight: 500;">Av</p>
 </div>"
 `;
 
-exports[`Avvvatars Snapshots > Shape 1`] = `"<div data-v-d64f069a="" class="avvvatars"><span data-v-d64f069a="" class="shape"><svg data-v-d64f069a="" width="16" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"><path d="M16 0l3.856 9.321 10-1.321-6.144 8 6.145 8-10.001-1.321L16 32l-3.856-9.321-10 1.321 6.144-8-6.144-8 10 1.321L16 0z" fill="currentColor"></path></svg></span></div>"`;
-
-exports[`Avvvatars Snapshots > Size 1`] = `
-"<div data-v-d64f069a="" class="avvvatars">
-  <p data-v-d64f069a="" class="text">Av</p>
+exports[`avvvatars Snapshots > shadow & Border 1`] = `
+"<div style="border: 2px solid #fff; box-shadow: 0px 3px 8px rgba(18, 18, 18, 0.04), 0px 1px 1px rgba(18, 18, 18, 0.02); width: 32px; height: 32px; border-radius: 32px; background-color: rgb(236, 225, 254); box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;">
+  <p style="margin: 0px; padding: 0px; text-align: center; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, BlinkMacSystemFont, &quot;Inter&quot;, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; color: rgb(25, 34, 81); line-height: 0; text-transform: uppercase; font-weight: 500;">Av</p>
 </div>"
 `;
 
-exports[`Avvvatars Snapshots > Value & displayValue 1`] = `
-"<div data-v-d64f069a="" class="avvvatars">
-  <p data-v-d64f069a="" class="text">te</p>
+exports[`avvvatars Snapshots > shape 1`] = `"<div style="width: 32px; height: 32px; border-radius: 32px; background-color: rgb(236, 225, 254); box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;"><span style="display: inline-flex; align-items: center; vertical-align: middle; color: rgb(25, 34, 81);"><svg width="16" height="16" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"><path d="M16 0l3.856 9.321 10-1.321-6.144 8 6.145 8-10.001-1.321L16 32l-3.856-9.321-10 1.321 6.144-8-6.144-8 10 1.321L16 0z" fill="currentColor"></path></svg></span></div>"`;
+
+exports[`avvvatars Snapshots > size 1`] = `
+"<div style="width: 50px; height: 50px; border-radius: 50px; background-color: rgb(236, 225, 254); box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;">
+  <p style="margin: 0px; padding: 0px; text-align: center; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, BlinkMacSystemFont, &quot;Inter&quot;, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 19px; color: rgb(25, 34, 81); line-height: 0; text-transform: uppercase; font-weight: 500;">Av</p>
 </div>"
 `;
 
-exports[`Avvvatars Snapshots > displayValue 1`] = `
-"<div data-v-d64f069a="" class="avvvatars">
-  <p data-v-d64f069a="" class="text">Av</p>
+exports[`avvvatars Snapshots > value & displayValue 1`] = `
+"<div style="width: 32px; height: 32px; border-radius: 32px; background-color: rgb(236, 225, 254); box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;">
+  <p style="margin: 0px; padding: 0px; text-align: center; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, BlinkMacSystemFont, &quot;Inter&quot;, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; color: rgb(25, 34, 81); line-height: 0; text-transform: uppercase; font-weight: 500;">te</p>
 </div>"
 `;
 
-exports[`Avvvatars Snapshots > value 1`] = `
-"<div data-v-d64f069a="" class="avvvatars">
-  <p data-v-d64f069a="" class="text">Av</p>
+exports[`avvvatars Snapshots > value 1`] = `
+"<div style="width: 32px; height: 32px; border-radius: 32px; background-color: rgb(236, 225, 254); box-sizing: border-box; display: flex; justify-content: center; align-items: center; user-select: none;">
+  <p style="margin: 0px; padding: 0px; text-align: center; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, BlinkMacSystemFont, &quot;Inter&quot;, &quot;Segoe UI&quot;, Roboto, sans-serif; font-size: 12px; color: rgb(25, 34, 81); line-height: 0; text-transform: uppercase; font-weight: 500;">Av</p>
 </div>"
 `;
