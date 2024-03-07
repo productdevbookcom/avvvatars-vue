@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { StyleValue, computed, reactive, ref } from 'vue'
 import randiman from '../lib/random'
 import { BACKGROUND_COLORS, SHAPE_COLORS, TEXT_COLORS } from '../lib/colors'
 import Shapes from './Shapes.vue'
@@ -46,76 +46,69 @@ const shapeKey = computed(() =>
 const borderComputed = computed(() => {
   if (!props.border)
     return ''
-  return `border: ${props.borderSize}px solid ${props.borderColor};`
+  return {
+    border: `${props.borderSize}px solid ${props.borderColor}`,
+  }
 })
 
 const shadowComputed = computed(() => {
   if (!props.shadow)
     return ''
-
-  return `
-        box-shadow:
-        0px 3px 8px rgba(18, 18, 18, 0.04),
-        0px 1px 1px rgba(18, 18, 18, 0.02);
-    `
+  return {
+    boxShadow: '0px 3px 8px rgba(18, 18, 18, 0.04), 0px 1px 1px rgba(18, 18, 18, 0.02)',
+  }
 })
 
 const fontSize = `${Math.round((props.size / 100) * 37)}px`
 
 const variant = ref(props.variant)
+
+const avvvatarsStyle = reactive({
+  width: `${props.size}px`,
+  height: `${props.size}px`,
+  borderRadius: `${props.radius || props.size}px`,
+  backgroundColor: `#${BACKGROUND_COLORS[key.value]}`,
+  boxSizing: 'border-box',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  userSelect: 'none',
+}) as StyleValue
+
+
+
+const avvvatarsShapeStyle = reactive({
+  display: 'inline-flex',
+  alignItems: 'center',
+  verticalAlign: 'middle',
+  color: `#${SHAPE_COLORS[key.value] || 'currentColor'}`,
+}) as StyleValue
+
+const avvvatarsText = reactive({
+  margin: 0,
+  padding: 0,
+  textAlign: 'center',
+  boxSizing: 'border-box',
+  fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif',
+  fontSize: fontSize,
+  color: `#${TEXT_COLORS[key.value]}`,
+  lineHeight: 0,
+  textTransform: 'uppercase',
+  fontWeight: 500,
+}) as StyleValue
 </script>
 
 <template>
-  <div class="avvvatars" :style="[borderComputed, shadowComputed]">
+  <div :style="[borderComputed, shadowComputed, avvvatarsStyle]">
     <template v-if="variant === 'character'">
-      <p class="text">
+      <p :style="avvvatarsText">
         {{ name }}
       </p>
     </template>
     <template v-else>
-      <span class="shape">
+      <span :style="avvvatarsShapeStyle">
         <Shapes :name="`${shapeKey}`" :size="Math.round((size / 100) * 50)" />
       </span>
     </template>
   </div>
 </template>
-
-<style scoped lang="postcss">
-.avvvatars {
-  width: v-bind(`${size}px`);
-  height: v-bind(`${size}px`);
-  border-radius: v-bind(`${radius || size}px`);
-  background-color: v-bind(`#${BACKGROUND_COLORS[key]}`);
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-}
-
-.avvvatars:hover {
-  z-index: 3;
-}
-
-.avvvatars .shape {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-  color: v-bind(`#${SHAPE_COLORS[key] || "currentColor"}`);
-}
-
-.avvvatars .text {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
-    BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
-  font-size: v-bind(fontSize);
-  color: v-bind(`#${TEXT_COLORS[key]}`);
-  line-height: 0;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-</style>

@@ -21,25 +21,22 @@
   "packageManager": "pnpm@8.15.0",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./style": "./dist/style.css"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
   },
-  "main": "./dist/index.es.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "scripts": {
     "build": "vite build --mode production",
-    "dev": "vite",
+    "dev": "pnpm --filter playground dev",
     "prepublishOnly": "pnpm run build",
     "release": "pnpm build && bumpp --commit --push --tag && pnpm publish",
-    "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
-    "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx . --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest",
     "test:watch": "vitest --watch",
     "coverage": "vitest run --coverage"
@@ -50,6 +47,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.8.0",
+    "@types/node": "^20.11.25",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitest/coverage-v8": "^1.3.1",
     "@vue-macros/volar": "^0.18.11",
@@ -57,7 +55,12 @@
     "bumpp": "^9.4.0",
     "eslint": "^8.57.0",
     "jsdom": "^24.0.0",
+    "postcss": "^8.4.35",
+    "sass": "^1.71.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.2",
+    "unbuild": "^2.0.0",
+    "unplugin-vue": "^5.0.4",
     "unplugin-vue-macros": "^2.7.10",
     "vite": "^5.1.5",
     "vite-plugin-dts": "^3.7.3",

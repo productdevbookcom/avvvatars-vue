@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import shapes from '../shapes.json'
+import shapes from '../shapes.json' 
 
 defineProps<{
   name: string
