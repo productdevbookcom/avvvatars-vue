@@ -76,8 +76,8 @@ importers:
         version: 3.4.21(typescript@5.4.2)
     devDependencies:
       '@vitejs/plugin-vue':
-        specifier: ^5.0.2
-        version: 5.0.4(vite@5.1.5)(vue@3.4.21)
+        specifier: ^5.1.4
+        version: 5.1.4(vite@5.1.5)(vue@3.4.21)
       avvvatars-vue:
         specifier: workspace:^
         version: link:..
@@ -1393,6 +1393,17 @@ packages:
 
   /@vitejs/plugin-vue@5.0.4(vite@5.1.5)(vue@3.4.21):
     resolution: {integrity: sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      vite: ^5.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 5.1.5(@types/node@20.11.25)
+      vue: 3.4.21(typescript@5.4.2)
+    dev: true
+
+  /@vitejs/plugin-vue@5.1.4(vite@5.1.5)(vue@3.4.21):
+    resolution: {integrity: sha512-N2XSI2n3sQqp5w7Y/AN/L2XDjBIRGqXko+eDp42sydYSBeJuSm5a1sLf8zakmo8u7tA8NmBgoDLA1HeOESjp9A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
