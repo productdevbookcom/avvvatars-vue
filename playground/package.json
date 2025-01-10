@@ -12,7 +12,7 @@
     "vue": "^3.4.3"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.2",
+    "@vitejs/plugin-vue": "^5.2.1",
     "avvvatars-vue": "workspace:^",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
