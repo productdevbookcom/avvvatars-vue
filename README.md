@@ -1,5 +1,3 @@
-![@productdevbook/avvvatars](./.github/assets/Cover.png)
-
 [![npm version](https://badge.fury.io/js/avvvatars-vue.svg)](https://badge.fury.io/js/avvvatars-vue)
 [![npm](https://img.shields.io/npm/dt/avvvatars-vue.svg)](https://www.npmjs.com/package/avvvatars-vue)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/avvvatars-vue.svg)](https://bundlephobia.com/result?p=avvvatars-vue)
@@ -127,14 +125,6 @@ Override border color
 ```jsx
 <Avvvatars value="best_user@gmail.com" border-color="#fff" />
 ```
-
-## Sponsors
-
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/oku-ui/static/sponsors/sponsors.svg">
-    <img alt="sponsors" src='https://cdn.jsdelivr.net/gh/oku-ui/static/sponsors/sponsors.svg'/>
-  </a>
-</p>
 
 ## License
 
